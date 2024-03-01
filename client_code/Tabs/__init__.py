@@ -48,7 +48,6 @@ _html_injector.css(
     height: 48px;
     padding: 0;
     margin: 0;
-    text-transform: uppercase
 }
 .tabs .tab a {
     color: rgba(var(--color),0.7);
