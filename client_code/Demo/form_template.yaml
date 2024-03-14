@@ -177,6 +177,7 @@ components:
     enabled: true
     items: [foo, bar, '---', eggs, spam]
     visible: true
+    font_size: '20'
     spacing_above: small
     spacing_below: small
     multiple: true

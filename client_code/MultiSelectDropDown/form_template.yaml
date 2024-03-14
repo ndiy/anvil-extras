@@ -40,6 +40,8 @@ properties:
   default_binding_prop: true
   binding_writeback_events: [change]
   important: true
+- {name: font_size, type: string, default_value: '', important: true, group: appearance,
+  allow_binding_writeback: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: when the selected values change}

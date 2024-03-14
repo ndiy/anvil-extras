@@ -73,6 +73,7 @@ _defaults = {
     "spacing_below": "small",
     "spacing_above": "small",
     "enable_select_all": False,
+    "font-size": "10",
     "width": "",
     "visible": True,
 }
@@ -117,6 +118,7 @@ class MultiSelectDropDown(MultiSelectDropDownTemplate):
         # Set Form properties and Data Bindings.
         self._init = False
         self._selectPicker = None
+        self._font_size = 10
 
         self._dom_node = _js.get_dom_node(self)
         _S_dom_node = _S(self._dom_node)
@@ -186,6 +188,14 @@ class MultiSelectDropDown(MultiSelectDropDownTemplate):
     def selected_keys(self):
         return [e.textContent for e in _S("option:selected", self._el) if e.value != ""]
 
+    @property
+    def font_size(self):
+      return self._font_size
+
+    @font_size.setter
+    def font_size(self, value):
+      self._font_size = value
+      
     @property
     def selected(self):
         return [
